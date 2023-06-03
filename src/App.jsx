@@ -3,22 +3,29 @@ import ItemListContainer from './componentes/ItemListContainer/ItemListContainer
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './componentes/NavBar/NavBar';
+import { CarritoContext, CarritoProvider } from './context/CarritoContext';
 
 function App() {
+  console.log('CarritoContext');
   return (
     <>
+
       <BrowserRouter>
-        <NavBar />
+        {/* <CarritoProvider> */}
 
-        <Routes>
+          <NavBar />
 
-          <Route path='/' element={<ItemListContainer />} />
-          <Route path='/categoria/:idCategoria' element={<ItemListContainer />} />
-          <Route path='/item/:idItem' element={<ItemDetailContainer />} />
+          <Routes>
+
+            <Route path='/' element={<ItemListContainer />} />
+            <Route path='/categoria/:idCategoria' element={<ItemListContainer />} />
+            <Route path='/item/:idItem' element={<ItemDetailContainer />} />
+            <Route path='*' element={<h2>Sitio en Contruccion :c </h2>} />
 
 
-        </Routes>
+          </Routes>
 
+        {/* </CarritoProvider> */}
       </BrowserRouter>
     </>
   );
