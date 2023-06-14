@@ -2,10 +2,9 @@ import { useState, createContext } from 'react';
 
 export const CarritoContext = createContext({ carrito: [] });
 
-export const CarritoProvider = ({ Children }) => {
+export const CarritoProvider = ({ children }) => {
     const [carrito, setCarrito] = useState([]);
 
-    console.log(Children);
 
     const agregarProducto = (item, cantidad) => {
         if (!yaEstaEnCarrito(item.id)) {
@@ -20,7 +19,7 @@ export const CarritoProvider = ({ Children }) => {
     };
 
     const eliminarProducto = (id) => {
-        const carritoActualizado = carrito.filter((prod) => prod.id !== id);
+        const carritoActualizado = carrito.filter((prod) => prod.item.id !== id);
         setCarrito(carritoActualizado);
     };
 
@@ -37,7 +36,7 @@ export const CarritoProvider = ({ Children }) => {
                 vaciarCarrito,
             }}
         >
-            {Children}
+            {children}
         </CarritoContext.Provider>
     );
 };

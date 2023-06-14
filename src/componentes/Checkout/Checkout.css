@@ -1,0 +1,26 @@
+.formulario {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+input,
+textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    display: flex;
+}
+label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+h2 {
+    text-align: center;
+}

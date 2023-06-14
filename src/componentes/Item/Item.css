@@ -1,7 +1,7 @@
 .cardProducto {
-    background-color: #bcbd8d;
-    border-radius: 10px;
-    width: 15rem;
+    background-color: #52c5ff;
+    border-radius: 15px;
+    width: 14rem;
     padding: 1rem;
     margin: 1rem;
     display: flex;
@@ -12,14 +12,12 @@
 .imgProducto {
     width: 150px;
     object-fit: contain;
+    border-radius: 15px;
 }
 
-.btnProducto {
-    background-color: #373d20;
-    color: white;
-    font-size: 1.2rem;
-    width: 8rem;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
+.btnDetalles {
+    font-size: 1.5rem;
+    padding: 5px;
+    color: rgb(0, 128, 239);
+    text-decoration: none;
 }
